@@ -1,20 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, FlatList, Image, Modal, Platform, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import * as ImagePicker from 'expo-image-picker';
+import { useEffect, useState } from 'react';
+import * as Calendar from 'expo-calendar';
+import CalendarPicker from 'react-native-calendar-picker';
+import { Camera, CameraType } from 'expo-camera';
+import { useNavigation } from '@react-navigation/native';
+import AppNavigator from './src/Navigation/AppNavigator';
+
+
 
 export default function App() {
+
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <AppNavigator />
+
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+
 });
